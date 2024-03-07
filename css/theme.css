@@ -1,0 +1,304 @@
+/*CHANGES: 
+color theme change
+order of our content changes from menu-content-aside to aside-content-menu for laptops/pcs with wider screens. 
+the tv with the video disapears
+logo image is changed to better fit the pallette
+I also changed the menu to spit from the top on mobile for both themes, since it was an issue.
+
+
+/* colors
+white-ish rgb(255, 250, 240) --> dark blue #04044a
+light blue rgb(200, 217, 255) --> dark purple #470867
+darkish red rgb(100, 40, 40); -- lighter blue #f69bfe
+lilacy color: rgb(253, 168, 254); -- teal color #0b8d99;
+Logo coral FF746B ---? light blue #C8D9FF
+*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: LibreFranklinExtraLight, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    gap: 20px;
+    background: linear-gradient(rgb(102, 56, 161), #0b8d99);
+    background-image: url("../media/ArtExamples/HUTAO.jpg");
+    background-repeat: no-repeat;
+    text-align:center;
+    background-size:cover;
+    min-height: 100%;
+    min-width: 100%;
+    background-attachment: fixed;
+}
+#art{
+    background-image: url("../media/ArtExamples/image\ \(3\).png");
+}
+#contact{
+    background-image: url(../media/ArtExamples/portraitasdg.png);
+}
+a{
+    text-decoration: none;
+}
+#myForm{
+    background: linear-gradient(rgba(71, 8, 103, 80%),rgba(4, 4, 74, 80%));
+    background-repeat:no-repeat;
+    color: #f69bfe;
+    width: 90%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    z-index: 3;
+    flex-direction: column; 
+    height: fit-content;
+}
+#myForm > .fa-solid{
+    color: #f69bf3;
+}
+.formText{
+    font-weight: bold;
+}
+#submitBtn{
+    background: transparent;
+    font-family: LibreFranklinExtraLight, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#FF746B;
+    padding: 8px;
+}
+/* header stuff */
+header{
+    
+    background-color: rgba(71, 8, 103, 80%);
+}
+#header-logo{
+    flex: 1;
+    max-width: 50px;
+    min-width: 50px;
+    max-height: 50px;
+    max-height: 50px;
+    width: 50px;
+    height:50px;
+    order: 3;
+}
+.header-text{
+    color:#f69bfe;
+}
+
+.fa-bars:hover{
+    color: #C8D9FF;
+}
+.fa-bars{
+    color: #f69bfe;
+}
+.fa-paint-roller:hover{
+    color:#f69bfe;
+}
+.fa-paint-roller{
+    color: #f69bfe;
+}
+/* other */
+/*main stuff*/
+
+@media (max-width:960px){
+    .menu{
+        
+        display: flex;
+        background: linear-gradient(#c8d9ff, #04044a);
+        background-repeat: none;
+        flex-wrap: wrap;
+        flex-flow: column;
+        border-radius: 10px;
+        vertical-align: top;
+        padding: 10px;
+        margin-top: -700px;
+        font-weight: bold;    
+        transition: all .3s ease-out;
+        margin-bottom: 50px;
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        }
+        
+    .main-content{
+        display: flex;
+        grid-row: 2/8;
+        grid-column: 1/6;
+        gap: 10px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        
+    }
+    .center-content{
+        order: 2;
+        flex: 3;
+        display: grid;
+        grid-template-columns: 5% 45% 45% 2% 5%;
+        grid-template-rows: 15% 20% 60% 5%;
+        background: linear-gradient(rgba(200, 217, 255, 90%), rgba(246, 155, 254, 90%));
+        border-radius: 10px;
+        vertical-align: top;
+        height: fit-content;
+        margin: 10px;
+    }
+}
+@media (min-width:960px){
+    .menu{
+        display: flex;
+        background: linear-gradient(#c8d9ff, #04044a);
+        }
+        
+    .main-content{
+        display: flex;
+        grid-row: 2/8;
+        grid-column: 1/6;
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+
+    }
+    .center-content{
+        order: 2;
+        flex: 3;
+        /* display: grid;
+        grid-template-columns: 5% 45% 45% 5%;
+        grid-template-rows: 15% 25% 55% 5%; */
+        display: flex;
+        flex-basis: content;
+        flex-direction: column;
+        padding: 20px;
+        align-items: top;
+        background: linear-gradient(rgba(200, 217, 255, 80%), rgba(246, 155, 254, 80%));
+        border-radius: 10px;
+        vertical-align: top;
+        margin: 10px;
+        height: fit-content;
+
+    }
+    
+}
+
+.inner-header{
+    background-color: white;    
+}
+.center-content-body{
+    color:#04044a;
+    background-color: rgb(253, 168, 254, 50%);
+}
+.center-content-body-headers{
+    background-color: #470867;
+    color:#f69bfe;
+}
+.center-content-body-hidden{
+    flex-direction: row-reverse;    
+}
+
+.center-content-body-headers:hover{
+    background-color: #0b8d99;
+}
+.plus-sign{
+    background-color: #470867;
+}
+
+.minus-sign{
+    background-color: #0b8d99;
+}
+.minus-sign::after{
+    content: "\2796";
+}
+
+#socials{
+    color:#C8D9FF;
+}
+#socials:hover{
+    color:  #f69bfe;
+}
+
+.tv-image{
+    display: none;
+}
+#tv-pos{
+    display: none;
+
+}
+.clipping-mask{
+   display: none;
+    
+}
+.video-container{
+   display: none;
+
+}
+.welcome-video{
+ display: none;
+}
+.art-video{
+  display: none;
+}
+
+
+
+.menu-items{
+    background-color:#C8D9FF;
+    color: #04044a;
+   
+}
+.menu-items-main{
+    background-color:#c8d9ff;
+    color: #04044a;
+}
+.menu-items-main:hover{
+    color:#f69bfe;
+    background-color:#470867;
+}
+.menu-items:hover{
+    color:#C8D9FF;
+    background-color: #04044a;
+}
+.menu-sub-items{
+    display: none;
+    background-color:#C8D9FF;
+    color: #04044a;
+}
+.menu-sub-items:hover{
+    color: #C8D9FF;
+    background-color: #04044a;
+}
+
+/* aside */
+.aside{
+    background:linear-gradient(rgba(200, 217, 255, 80%), #04044a);
+    color: white;
+}
+
+/* footer */
+footer{
+    color: #470867;
+    background-color:#f69bfe;
+    bottom: -20px;
+    grid-row: 10px 8;
+    grid-column: 1/6;
+    display: flex;
+    justify-content:center;
+    padding-top: 0.01%;
+    padding-bottom: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    text-align: center;
+    width: 100%;
+}
+.footer-content{
+    flex: 5;
+}
+.fa-envelope{
+    color: #C8D9FF;
+}
+/* fonts  */

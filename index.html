@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+Project: Project 3 responsive web-design
+Name: Sarah Keeley
+Submitted:
+
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+
+-->
+<!-- home page  -->
+<html>
+    <head>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://kit.fontawesome.com/53419ddd5c.js" crossorigin="anonymous" rel="stylesheet"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+</head>  
+
+<body>
+    <header>
+        <!-- header -->
+        <!-- menu button here -->
+        <button onclick="hideMenu()">
+        <i class="fa-solid fa-bars fa-lg menu-button"></i>    
+        </button>
+
+        <!-- title text here  -->
+        <p class="header-text"> Sarah's Art</p>
+        <button id="themeChange">
+            <i class="fa-solid fa-paint-roller"></i>
+        </button>
+        <!-- logo here -->
+        <img src="media/sazzylogodarkred.png" alt="Pink Cartoon Image icon" id="header-logo"></img>
+    </header>
+
+
+    <section class="main-content">
+        <!-- space placeholder -->
+        <container class="menu-container">
+
+        <nav class="menu" id="hidden">
+            <!-- menue -->
+                <div>Menu:<br></div>
+                <a href="index.html">
+                    <div class="menu-items">Home</div>
+                </a>
+                <a href="art.html">
+                    <div class="menu-items">Art</div>
+                </a>
+                <a href="contact.html">
+                    <div class="menu-items">Contact</div>
+                </a>
+                <button class="button" id="visitLog"><div class="menu-items">Visitor Log</div></button>
+
+                <nav class="socials-aside">
+                    <a href="https://www.instagram.com/dizzy_drizzled/" target="_blank" ><i class="fa-brands fa-square-instagram fa-2xl" id="socials"></i></a> 
+                    <a href="https://twitter.com/Sazzizzy" target="_blank" ><i class="fa-brands fa-twitter fa-2xl" id="socials"></i></a>
+                    <a href="https://www.deviantart.com/sazzizzy" target="_blank"><i class="fa-brands fa-deviantart fa-2xl" id="socials"></i></a>
+                    <!-- socials -->
+                   </nav>
+                   <div></div>
+
+        </nav>
+    </container>
+    <p class="hidden" id="success-message">Thank You!</p>
+        <section class="center-content">
+            <!-- main body -->
+            <div class="inner-header">Welcome!</div>
+            <div class="center-content-body">
+                <img src="media/ArtExamples/image (2).png" alt="girl reaching out to marble hands" class="main-image"></img>
+               <button class="center-content-body-headers">Some General Art Examples </button>
+               <div class="center-content-body-hidden">
+                    <figure><img class="image" src="media/ArtExamples/runleft1.gif" alt="animated character running to the left."/><figcaption> Chibi Pixel-Art Animated 3d Fullbody Human</figcaption></figure>
+                    <figure><img class="image" src="media/ArtExamples/image (7).png" alt="A colorful drawn picture of a girl's portrait."/> <figcaption>Human Fully-Rendered (special) Portrait</figcaption></figure> 
+                    <figure><img class="image" src="media/ArtExamples/ponies.png" alt="A drawn picture of the character rainbow dash from my little pony."/> <figcaption>Pony Fully-Rendered Fullbody</figcaption></figure>
+                    <figure><img class="image" src="media/ArtExamples/witchychsmaller (1).gif" alt="Animated Witch Girl"/> <figcaption>Flat-color Animated Human Chibi Portrait</figcaption></figure>
+                </div>
+                <div>Menu:<br></div>
+            <a href="art.html">
+                <div class="menu-items-main">Art</div></a>
+                <a href="contact.html">
+                <div class="menu-items-main">Contact</div>
+            </a>
+            </div> 
+            
+            <!-- header, change if home/ art/ comms/ etc  -->
+            <!-- body, change if home/art/comms/etc -->
+           
+        </section>
+        <section class="aside">
+            <!-- aside --> 
+            <p>
+                Welcome! <div>My name is Sarah Keeley!</div><div>I do all sorts of art, and I'm working on making videogames right now, namely one called "Basamortuko"!</div><div>Thank you for visiting my website!</div>
+            </p>
+            <nav class="socials-aside">
+                <a href="https://www.instagram.com/dizzy_drizzled/" target="_blank" ><i class="fa-brands fa-square-instagram fa-2xl" id="socials"></i></a> 
+                <a href="https://twitter.com/Sazzizzy" target="_blank" ><i class="fa-brands fa-twitter fa-2xl" id="socials"></i></a>
+                <a href="https://www.deviantart.com/sazzizzy" target="_blank"><i class="fa-brands fa-deviantart fa-2xl" id="socials"></i></a>
+                <!-- socials -->
+               </nav>
+            <img src="media/OLD-TIMEY-TV-Clipping.png" class=" clipping-mask" id="tv-pos" alt="Black screen behind video."></img>
+            <div class="video-container">
+                <video class="welcome-video" width="1080" height="1920"  controls="controls">
+                    <source src="media/VID_20240110_174932973.mp4" type="video/mp4"></source>
+                </video>
+            </div>
+                <img src="media/OLD-TIMEY-TV.png" class="tv-image" id="tv-pos" alt="Old-timey-Tv with image slideshow embedded in it's screen."><img>
+        </section>
+        </section>
+        <footer>
+            <p class="footer-content">Contact Me at: Sarahckeeley@gmail.com   <i class="fa-solid fa-envelope fa-lg"></i></p> 
+        </footer>
+        
+    <p id="popup">
+        <form  id="myForm" class="hidden">
+            <div>
+                <label class="formText" for="firstName">   First Name:</label>
+                <input type="text" name="firstName" id="firstName" class="inputForm">
+                <div class="errorMsg"></div>
+            </div>
+            <div>
+                <label class="formText" for="lastName">   Last Name:</label>
+                <input type="text" name="lastName" id="lastName" class="inputForm">
+                <div class="errorMsg"></div>
+            </div>
+            <div>
+                <i class="fa-solid fa-earth-americas"></i>
+                <label class="formText" for="address">   Address:</label>
+                <input type="text" name="address" id="address"class="inputForm">
+                <div class="errorMsg"></div>
+            </div>
+            <div>
+                <i class="fa-solid fa-city"></i>
+                <label class="formText" for="city">   City:</label>
+                <input type="text" name="city" id="city"class="inputForm">
+                <div class="errorMsg"></div>
+            </div>
+            <div>
+                <i class="fa-solid fa-flag-usa"></i>
+                <label class="formText" for="state">   State:</label>
+                <input type="text" name="state" id="state" minlength="2" maxlength="2"class="inputForm">
+                <div class="errorMsg"></div>
+            </div>
+            <div>
+                <i class="fa-solid fa-flash"></i>
+                <label class="formText" for="zip">   Zip:</label>
+                <input type="text" name="zip" id="zip"class="inputForm">
+                <div class="errorMsg"></div>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <label class="formText" for="cellPhone">   Cell Phone:</label>
+                <input type="text" name="cellPhone" id="cellPhone"class="inputForm">
+                <div class="errorMsg"></div>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i> 
+                <label class="formText" for="email">   Email Address:</label>
+                <input type="text" name="email" id="email"class="inputForm">
+                <div class="errorMsg"></div>
+            </div>
+            <div>
+                <i class="fa-solid fa-headphones-simple"></i> 
+                <label class="formText" for="howFound">   How did you find my page?</label>
+                <div>
+                    <div>
+                        <label class="formText" for="howFound">   Friend</label>
+                        <input  type="checkbox" name="howFound" id="howFound">
+                    </div>
+                    <div>
+                        <label class="formText" for="howFound2">   Internet</label>
+                        <input type="checkbox" name="howFound2" id="howFound2">    
+                    </div>
+                    <div>
+                        <label class="formText" for="howFound3">   CSS Assignment</label>
+                        <input type="checkbox" name="howFound3" id="howFound3">    
+                    </div>
+                    <div class="errorMsg" id="checkBoxErrorMsg"></div>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-bullhorn"></i> 
+                <label class="formText" for="comments">Comments:</label>
+                <input type="text" name="comments" id="comments"class="inputForm">
+            </div>
+            <div>
+                <input type="submit" name="submitBtn" id="submitBtn">
+            </div>
+        </form>
+    </p>
+    </body>
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+
+</html>
